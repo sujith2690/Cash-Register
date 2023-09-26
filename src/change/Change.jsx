@@ -43,7 +43,7 @@ const Change = ({ balance }) => {
       }
     }
     if (balance > 0) {
-      return 'Cannot give change';
+      return 'INSUFFICIENT FUNDS';
     }
     return change;
   };
@@ -66,7 +66,7 @@ const Change = ({ balance }) => {
             return (
               <tr key={index}>
                 <td>{item.name}</td>
-                <td>{item.value}</td>
+                <td>{item.value} $</td>
                 <td>
                   <input
                     type="number"
@@ -76,7 +76,7 @@ const Change = ({ balance }) => {
                     }
                   />
                 </td>
-                <td>sum: {rowTotal}</td>
+                <td>sum: {rowTotal} $</td>
               </tr>
             );
           })}
@@ -86,7 +86,7 @@ const Change = ({ balance }) => {
           </tr>
         </tbody>
       </table>
-      <h3>Return:{balance}</h3>
+      <h3>Return: {balance} $</h3>
       {typeof change === 'string' ? (
         <p className='returnMoney'>{change}</p>
       ) : (

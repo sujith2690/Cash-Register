@@ -3,8 +3,8 @@ import './App.css';
 import Change from './change/Change';
 
 const App = () => {
-  const [price, setPrice] = useState('');
-  const [payment, setPayment] = useState('');
+  const [price, setPrice] = useState();
+  const [payment, setPayment] = useState();
   const [balance, setBalance] = useState(0)
 
   const checkCashRegister = (e) => {
@@ -14,16 +14,15 @@ const App = () => {
     }
   };
   const findBalance = (price, payment) => {
-    // const balance = (price - payment).toFixed(2);
-    // return parseFloat(balance);
-    if (price > payment) {
-      return setBalance('Payment is not complete')
+    let prices = parseFloat(price);
+    let payments = parseFloat(payment);
+    let bal = (prices - payments).toFixed(2);
+    if (prices > payments) {
+      return setBalance('Payment is not Complete')
     }
-    let bal = (price - payment).toFixed(2);
-
     let value = parseFloat(bal)
+    console.log(typeof prices);
     const bce = (price - payment)
-
     setBalance(Math.abs(value))
     return Math.abs(value);
     // return balance
@@ -59,7 +58,7 @@ const App = () => {
         </div>
         <button className='btn' type='submit'>Submit</button>
         <button className='btn' onClick={handleClear}>Clear</button>
-        <h3>Balance : {balance}</h3>
+        <h3>Balance : {balance} $</h3>
         <Change balance={balance} />
       </form>
     </div>

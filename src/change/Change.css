@@ -1,0 +1,27 @@
+.changeBlock{
+    height:fit-content;
+    border: 2px solid yellow;
+}
+
+.returnMoney{
+    list-style: none;
+    color: red;
+    align-items: center;
+    text-align: center;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 3px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }

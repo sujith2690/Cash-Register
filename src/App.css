@@ -1,0 +1,40 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+.main{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #cfaf86;
+}
+.btn{
+  margin-top: 10px;
+  padding: 10px;
+  margin-right: 10px;
+  background: rgba(43, 145, 212, 0.904);
+  border: none;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+}
+.values{
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.cashRegister{
+  height: 500px;
+  width: 500px;
+  border: 2px solid green;
+  padding: 10px;
+}
+.inputField{
+  padding: 10px;
+  font-size: 20px;
+  outline: none;
+  border-radius: 5px;
+  width: 100%;
+}
